@@ -1,0 +1,574 @@
+<html>
+<head>
+  <title>
+    impelsys
+  </title>
+<style>
+body{
+background-image:url("https://www.bmw.com.ph/content/dam/bmw/common/all-models/4-series/gran-coupe/2017/images-and-videos/images/BMW-4-series-gran-coupe-images-and-videos-1920x1200-12.jpg.asset.1519121502869.jpg") ;
+height:100%;
+
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+padding:0px;
+margin:0px;
+overflow: auto;
+display: inline;
+
+}
+ul{
+  width: 100%;
+list-style-type:none;
+padding:0px;
+margin:0px;
+background-image:linear-gradient(#2A5975,#AAC4D4,#DF6F37);
+overflow: auto;
+
+text-align: center;
+
+}
+li a{
+float:left;
+display:block;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+color:white;
+padding:16px  64px 16px 16px;
+margin:0px;
+text-decoration:none;
+}
+li a:hover{
+background-color:black;
+
+}
+li a.active{
+background-color: #0E4B5E;
+}
+
+.b{
+display:border;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+color:white;
+width:80%;
+padding:0 px;
+margin:0px;
+background-color:rgba(93,188,210,0.7s);
+text-decoration:none;
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding:4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 23px;
+  right: 28px;
+  width: 150px;
+  display: grid;
+}
+.open-button1{
+  background-color: #555;
+  color: white;
+  padding:4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 100px;
+  right: 28px;
+  width: 150px;
+  display: grid;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  overflow: scroll;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #0E4B5E;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 0px 0 2px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.logo{
+  width:250px;
+  height:100px;
+  display: flex;
+}
+  
+.logo img{ 
+  width: 100%;
+  border-radius: 50px;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  ul{
+    flex: 100%;
+  }
+}
+#ul li{
+  display: inline;
+}
+.navbar{
+  display: flex;
+}
+.rightnav
+{
+  padding: 14px;
+  width: 40%;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(#2A5975,#AAC4D4,#DF6F37);
+
+}
+@media (min-width: 768px) and (max-width: 991px)
+.banner_main {
+    min-height: 605px;
+}
+.banner_main {
+    background: url(banner.jpg);
+    background-repeat: no-repeat;
+    min-height: 840px;
+    min-width: 540px;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+@media (min-width: 576px)
+.container{
+    max-width: 540px;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 768px)
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+}
+@media (min-width: 768px)
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.text-bg {
+    text-align: center;
+}
+@media (min-width: 768px) and (max-width: 991px)
+.text-bg h1 {
+    font-size: 49px;
+    line-height: 65px;
+    padding-bottom: 10px;
+}
+.text-bg h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 110px;
+    line-height: 120px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+.text-bg p {
+    font-size: 25px;
+    color: #fff;
+    line-height: 28px;
+    font-weight: 500;
+    padding-bottom: 50px;
+    display: block;
+}
+p {
+    margin: 0px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 24px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.text-bg a {
+    font-size: 17px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    padding: 11px 0px;
+    width: 100%;
+    max-width: 230px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 30px;
+    border: #f4cb1e solid 4px;
+    transition: ease-in all 0.5s;
+}
+a, .btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+a {
+    color: #1f1f1f;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+@media (min-width: 768px) and (max-width: 991px)
+.three_box {
+    margin-top: -102px;
+}
+@media (max-width: 575px)
+.three_box {
+    padding: 0 0px;
+}
+.three_box {
+    margin-top: -60px;
+}
+
+.col-md-12{
+  position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-md-4{
+
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+@media (max-width: 575px)
+.box_text {
+   width:100%;
+    margin-top: 30px;
+    box-shadow: #ddd 0px 0px 7px 0px;
+}
+.box_text {
+    box-shadow: 0 0 95px rgb(13 3 3 / 56%);
+}
+.box_text figure {
+    margin:20px;
+}
+figure {
+    margin: 0 0 1rem;
+}
+.box_text figure img {
+    width: 100%;
+}
+@media (min-width: 768px)
+.col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style:dashed;
+}
+.hottest {
+    background: #fff;
+    padding: 90px 0 0px 0;
+}
+.d_flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (min-width: 768px)
+.col-md-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+.col-md-5,.col-md-7{
+  position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.hottest .titlepage {
+    padding-bottom: 0;
+    text-align: left;
+}
+.titlepage {
+    text-align: center;
+    padding-bottom: 60px;
+}
+.hottest .titlepage h2 {
+    color: #000;
+}
+@media (min-width: 768px)
+.col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+@media (min-width: 768px) and (max-width: 991px)
+.titlepage h2 {
+    font-size: 33px;
+}
+.titlepage h2 {
+    font-size: 50px;
+    color: #090807;
+    line-height: 62px;
+    font-weight: bold;
+    padding: 0;
+}
+h2 {
+    font-size: 22px;
+}
+.hottest .hottest_box {
+    position: relative;
+    background-color: #f4cb1e;
+    padding: 60px 40px;
+}
+.hottest .hottest_box p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+</style>
+
+</head>
+<body>
+<button class="open-button" onclick="register()"><h2>Register</h2></button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+
+</div>
+<button class="open-button1" onclick="signup()"><h2>signup</h2></button>
+<div class="form-popup" id="Form">
+  <form action="insert.php" class="form-container" method="POST">
+    <h1>signup</h1>
+ <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="username" required></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" name="password" required></td>
+   </tr>
+   <tr>
+    <td>Gender :</td>
+    <td>
+     <input type="radio" name="gender" value="m" required>Male
+     <input type="radio" name="gender" value="f" required>Female
+    </td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" name="email" required></td>
+   </tr> 
+   <tr>
+    <td>Phone no :</td>
+    <td>
+     <select name="phoneCode" required>
+      <option selected hidden value="">Select Code</option>
+      <option value="977">977</option>
+      <option value="978">978</option>
+      <option value="979">979</option>
+      <option value="973">973</option>
+      <option value="972">972</option>
+      <option value="974">974</option>
+     </select>
+     <input type="phone" name="phone" required>
+    </td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+  <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+  </form>
+</div>
+
+<script>
+function register() {
+  document.getElementById("myForm").style.display = "grid";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function signup() {
+  document.getElementById("Form").style.display = "grid";
+}
+function closeForm1() {
+  document.getElementById("Form").style.display = "none";
+}
+
+
+
+
+
+</script>
+<a class="logo"><img src="C:\Users\Shubham\Desktop\html\lgo.jpg"></a>
+<nav class="navbar">
+<ul>
+<li><a class="active" href="#home">HOME</a></li>
+<li><a  href="page3.html">About</a></li>
+<li><a  href="page1.html">Images</a></li>
+<li><a  href="page2.html">Education</a></li>
+
+<li><a  href="page6.html">contact Us</a></li>
+
+</ul>
+<a class="rightnav">
+  <input type="text" name="search" id="search">
+  <button class="btn btn-sm">Search</button>
+</a>
+</nav>
+<section class="banner_main">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="text-bg">
+                     <h1>FARMING COMPANY</h1>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it</p>
+                     <a href="#">Discover</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+<div class="three_box">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <figure><img src="img1.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <figure><img src="img2.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <figure><img src="img3.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<div  class="hottest">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="titlepage">
+                     <h2>World’s Hottest Destinations <br>for Vegans</h2>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="hottest_box">
+                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+</body>
+</html>
