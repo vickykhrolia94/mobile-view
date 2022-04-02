@@ -1,0 +1,253 @@
+<html>
+<head>
+  <title>
+    impelsys
+  </title>
+<style>
+body{
+background-image:url("https://www.bmw.com.ph/content/dam/bmw/common/all-models/4-series/gran-coupe/2017/images-and-videos/images/BMW-4-series-gran-coupe-images-and-videos-1920x1200-12.jpg.asset.1519121502869.jpg") ;
+height:100%;
+
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+padding:0px;
+margin:0px;
+overflow: auto;
+display: inline;
+
+}
+ul{
+list-style-type:none;
+padding:0px;
+margin:0px;
+background-image:linear-gradient(#2A5975,#AAC4D4,#DF6F37);
+overflow: auto;
+
+text-align: center;
+
+}
+li a{
+float:left;
+display:block;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+color:white;
+padding:16px  64px 16px 16px;
+margin:0px;
+text-decoration:none;
+}
+li a:hover{
+background-color:black;
+
+}
+li a.active{
+background-color: #0E4B5E;
+}
+div{
+display:border;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+color:white;
+padding:8px  8px 8px 8px;
+margin:20px 29% 0px 25%;
+background-color:#1368E6;
+text-decoration:none;
+}
+.b{
+display:border;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+color:white;
+width:80%;
+padding:0 px;
+margin:0px;
+background-color:rgba(93,188,210,0.7s);
+text-decoration:none;
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding:4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 23px;
+  right: 28px;
+  width: 150px;
+  display: grid;
+}
+.open-button1{
+  background-color: #555;
+  color: white;
+  padding:4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 100px;
+  right: 28px;
+  width: 150px;
+  display: grid;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  overflow: scroll;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #0E4B5E;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 0px 0 2px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  ul{
+    flex: 100%;
+  }
+}
+#ul li{
+  display: inline;
+}
+
+
+</style>
+<a ><img src="C:\Users\Shubham\Desktop\html\lgo.jpg" height="100px" width="250px"  ></a>
+</head>
+<body>
+<button class="open-button" onclick="register()"><h2>Register</h2></button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+
+</div>
+<button class="open-button1" onclick="signup()"><h2>signup</h2></button>
+<div class="form-popup" id="Form">
+  <form action="insert.php" class="form-container" method="POST">
+    <h1>signup</h1>
+ <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="username" required></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" name="password" required></td>
+   </tr>
+   <tr>
+    <td>Gender :</td>
+    <td>
+     <input type="radio" name="gender" value="m" required>Male
+     <input type="radio" name="gender" value="f" required>Female
+    </td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" name="email" required></td>
+   </tr> 
+   <tr>
+    <td>Phone no :</td>
+    <td>
+     <select name="phoneCode" required>
+      <option selected hidden value="">Select Code</option>
+      <option value="977">977</option>
+      <option value="978">978</option>
+      <option value="979">979</option>
+      <option value="973">973</option>
+      <option value="972">972</option>
+      <option value="974">974</option>
+     </select>
+     <input type="phone" name="phone" required>
+    </td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+  <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+  </form>
+</div>
+
+<script>
+function register() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function signup() {
+  document.getElementById("Form").style.display = "block";
+}
+function closeForm1() {
+  document.getElementById("Form").style.display = "none";
+}
+
+
+
+
+
+</script>
+<ul>
+<li><a class="active" href="#home">HOME</a></li>
+<li><a  href="page3.html">About</a></li>
+<li><a  href="page1.html">Images</a></li>
+<li><a  href="page2.html">Education</a></li>
+
+<li><a  href="page6.html">contact Us</a></li>
+
+</ul>
+</body>
+</html>

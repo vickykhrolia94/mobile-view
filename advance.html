@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head >
+  <title>impelsys</title><center>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<img src="Impelsys-Logo-Light-1.png">
+	<h1 style="color:indianred;"><center>Impelsys work</center></h1>
+</center>
+	
+</head>
+<body bgcolor="lightgreen"><center>
+	<video align="centre" width="320" height="240" controls>
+  <source src="topclass1.mp4" type="video/mp4">
+  </video><br>
+  <audio controls>
+  
+  <source src="yaar.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><br>
+
+  <iframe align="centre" width="420" height="315"
+src="https://www.youtube.com/embed/YtZBxAn2uQs">
+</iframe><br>
+<iframe src="https://www.youtube.com" title="youtube tutorials">
+</iframe><br>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script><br>
+
+<canvas id="canvas" width="200" height="100" style="border:3px solid #000000;">
+</canvas><br>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+</script><br>
+<button onclick="welcome()"> Want to go on youtube </button>  
+<script> 
+function welcome() { 
+window.open("https://www.youtube.com/");
+} 
+</script>     
+
+
+</center>
+</body>
+</html>
+-------------------
+@media (min-width: 768px)
+.col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}

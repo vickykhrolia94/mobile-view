@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>advance css</title>
+	<style>
+	body{
+	text-align:center;
+	
+	}   
+.a{  
+    width: 100px;  
+    height: 100px;  
+    background: red;  
+    
+    animation: myfirst 5s;  
+}  
+@keyframes myfirst {  
+    from {background: red;}  
+    to {background: green;}  
+}  
+.b
+{
+width:200px;
+height:200px;
+animation:demo 5s ease-in infinite, trans 5s ease-in-out infinite;
+border-radius:40px;
+}
+
+@keyframes demo
+{
+ 0% {background:red;}
+ 50% {background:yellow; width:100px; height:100px;}
+ 100% {background:green; width:300px; height:300px;}
+}
+table, th, td {  
+    border: 1px solid black;  
+    border-collapse: collapse;  
+}  
+th, td {  
+    padding: 10px;  
+}  
+table#alter tr:nth-child(even) {  
+    background-color: #eee;  
+}  
+table#alter tr:nth-child(odd) {  
+    background-color: #fff;  
+}  
+table#alter th {  
+    color: white;  
+    background-color: gray;  
+}  
+container {  
+width: 200px;  
+height: 100px;  
+border: 1px solid black;  
+display: flex;  
+margin: 15px;  
+background-color: blue;  
+}  
+  
+.flex-item{  
+flex: 1; 
+}  
+.flex-item1{  
+flex: 0 50px;
+}  
+.flex-item2{  
+flex: 2 2;  
+}  
+.flex-item, .flex-item1, .flex-item2 {  
+background-color: lightblue;  
+margin: 4px;  
+}  
+</style>
+
+</head>
+<body>
+	<p>See the rectangle background from RED to BLACK.</p>
+<div class="a" align="centre"></div> <br>
+<div class="b"></div>
+<p>After the completion of the Animation, the element retracts to its original State </p><br>
+<table id="alter">  
+<tr><th>First_Name</th><th>Last_Name</th><th>Marks</th></tr>  
+<tr><td>kartik</td><td>Jaiswal</td><td>60</td></tr>  
+<tr><td>satish</td><td>chodhary</td><td>80</td></tr>  
+<tr><td>Swati</td><td>rai</td><td>82</td></tr>  
+<tr><td>Chetna</td><td>Singh</td><td>72</td></tr>  
+</table> <br>
+<h1> CSS flex Property </h1>
+<h3> flex: 1; </h3>
+<div class = "container">
+<div class = "flex-item">
+</div>
+<div class = "flex-item">
+</div>
+<div class = "flex-item">
+</div>
+</div>
+<h3> flex: 0 50px; </h3>
+<div class = "container">
+<div class = "flex-item1">
+</div>
+<div class = "flex-item1">
+</div>
+<div class = "flex-item1">
+</div>
+</div>
+<h3> flex: 2 2; </h3>
+<div class = "container">
+<div class = "flex-item2">
+</div>
+<div class = "flex-item2">
+</div>
+<div class = "flex-item2">
+</div>
+</div>  
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>impelsys work</title>
+<style> 
+	body{
+	text-align:center;
+	counter-reset: section;
+	}
+        #img1 { 
+            filter: brightness(130%); 
+        } 
+     #ins
+            {
+                  
+                box-shadow: 5px 10px 10px 10px orange inset; 
+            }  
+      p.multi{  
+        text-shadow: -3px -3px 3px blue, 3px 3px 3px red;  
+        font-size:30px;  
+        text-align:center;  
+      }  
+      h2::before {
+    counter-increment: section;
+    content: "Section " counter(section) ": ";
+}
+    </style> 
+</head> 
+<body> 
+        <img src =  "tiger.png" > <h2>Original Image	</h2>
+        <img src =  "tiger.png" id = "img1"> <h2>brightness(130%)</h2>
+        <br> 
+     <div id = "ins"> 
+      <h1>It is a box that includes the inset attribute.</h1>
+   </div><br>
+   <p class="multi">   
+    Multiple Shadows  
+    </p>  
+    <br>
+    <h2>Java Tutorial</h2>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+</body> 
+  
+</html>
